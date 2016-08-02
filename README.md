@@ -6,5 +6,7 @@
 1. Make a profit
 
 [links]
+
 https://vsconf-cfp-voting.surge.sh/vote/8d196d55ad66c629e855a499
+
 https://vsconf-cfp-voting.surge.sh/vote/8d196d55ad66c629e855a499?lite
