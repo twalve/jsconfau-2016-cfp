@@ -52,9 +52,9 @@
 						pair(queries[query]);
 					}
 				}
-			} else {
+			}/* else {
 				pair("lite");// development mode
-			}
+			}*/
 		},
 		init: function () {
 			this.search();
