@@ -5,13 +5,16 @@
 			const shadow = document.createElement("div");
 
 			for (let button in this.buttons) {
+				const span = document.createElement("span");
 				const div = document.createElement("div");
 				const label = document.createElement("label");
 
+				span.innerHTML = "[" + (button * 1 + 1) + "]";
 				div.innerHTML = this.buttons[button];
 				label.setAttribute("for", "option_" + button);
 				label.setAttribute("class", "btn btn-default");
 				label.setAttribute("role", "button");
+				div.appendChild(span);
 				label.appendChild(div);
 				shadow.appendChild(label);
 			}
@@ -24,6 +27,18 @@
 			panel.innerHTML = this.build();
 			document.querySelector("body").appendChild(panel);
 		},
+		shortcut: function (event) {
+			let comments = document.querySelector("[name='comments']");
+
+			if (comments !== document.activeElement) {
+				if (event.keyCode > 48 && event.keyCode < 56) { // 1 == 49 ... 7 == 55
+					let key = event.keyCode - 49;
+					let selector = "#option_" + key; // to access zero indexed radio button
+
+					document.querySelector(selector).click();
+				}
+			}
+		},
 		submit: function (event) {
 			const form = document.querySelector(".Proposal form");
 			const button = form.querySelector("button");
@@ -31,6 +46,7 @@
 		},
 		listen: function () {
 			document.querySelector("body").addEventListener("change", CFPV.submit);
+			document.querySelector("body").addEventListener("keyup", CFPV.shortcut);
 		},
 		search: function () {
 			function pair (string) {
