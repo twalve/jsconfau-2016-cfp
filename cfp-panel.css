@@ -1,61 +1,68 @@
 body {
-  margin-top: 4.5rem;
+	margin-top: 4.5rem;
 }
 
 .App-header {
-  background-color: rgba(0,0,0,.66);
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+	background-color: rgba(0,0,0,.66);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
 }
 
 .ProgressBar.js {
-  background: transparent;
-  color: orange;
-  display: inline-block;
-  left: 50%;
-  margin-left: -25%;
-  top: 3.75rem;
-  padding: .5rem;
-  right: 0;
-  text-align: center;
-  width: 50%;
-  z-index: 1010;
+	background: transparent;
+	color: orange;
+	display: inline-block;
+	left: 50%;
+	margin-left: -25%;
+	top: 3.75rem;
+	padding: .5rem;
+	right: 0;
+	text-align: center;
+	width: 50%;
+	z-index: 1010;
 }
 
 .Proposal form {
-  display: none;
+	display: none;
 }
 
 #panel {
-  background-color: black;
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  z-index: 1000;
+	background-color: black;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	z-index: 1000;
 }
 
 #panel label {
-  border-radius: .25rem;
-  cursor: pointer;
-  display: inline-block;
-  margin: .5rem;
-  padding-bottom: .33rem;
+	border-radius: .25rem;
+	cursor: pointer;
+	display: inline-block;
+	margin: .5rem;
+	padding-bottom: .33rem;
+}
+
+#panel label span {
+	margin-left: .25rem;
+	position: relative;
+	top: -.125rem;
 }
 
 #panel .btn-default {
-    color: #333;
-    background-color: #fff;
-    border-color: #ccc;
+	color: #333;
+	background-color: darkgrey;
+	border-color: darkgrey;
 }
 
 #panel .btn-default:hover {
-    background-color: #ccc;
+	/*background-color: #ccc;*/
 }
 
 #panel .btn div {
-  font-weight: normal;
+	color: #ccc;
+	font-weight: normal;
 }
